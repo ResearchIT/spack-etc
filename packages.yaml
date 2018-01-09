@@ -1,0 +1,59 @@
+# -------------------------------------------------------------------------
+# This file controls default concretization preferences for Spack.
+#
+# Settings here are versioned with Spack and are intended to provide
+# sensible defaults out of the box. Spack maintainers should edit this
+# file to keep it current.
+#
+# Users can override these settings by editing the following files.
+#
+# Per-spack-instance settings (overrides defaults):
+#   $SPACK_ROOT/etc/spack/packages.yaml
+#
+# Per-user settings (overrides default and site settings):
+#   ~/.spack/packages.yaml
+# -------------------------------------------------------------------------
+packages:
+  all::
+    compiler: [gcc@7.1.0]
+    providers:
+      awk: [gawk]
+      blas: [openblas]
+      daal: [intel-daal]
+      elf: [elfutils]
+      golang: [gcc]
+      ipp: [intel-ipp]
+      java: [jdk]
+      lapack: [openblas]
+      mkl: [intel-mkl]
+      mpe: [mpe2]
+      mpi: [openmpi]
+      opencl: [pocl]
+      openfoam: [openfoam-com, openfoam-org, foam-extend]
+      pil: [py-pillow]
+      scalapack: [netlib-scalapack]
+      szip: [libszip, libaec]
+      tbb: [intel-tbb]
+      jpeg: [libjpeg-turbo, libjpeg]
+  python:
+    variants: +shared~tk~ucs4
+  openmpi:
+    variants: ~cuda fabrics=verbs ~java schedulers=slurm ~sqlite3~thread_multiple+vt
+  boost:
+    variants: +atomic+chrono~clanglibcpp+date_time~debug+filesystem~graph~icu+iostreams+locale+log+math+mpi+multithreaded +program_options+python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout+wave arch=linux-rhel7-x86_64 
+  blast-plus:
+    variants: +bzip2+freetype+gnutls+jpeg+lzo+openssl+pcre+perl+png+python~static+zlib
+  perl:
+    variants: +cpanm+shared
+  r:
+    variants: ~X~external-lapack
+  openblas:
+    variants: ~ilp64+pic+shared threads=none ~virtual_machine
+  opencv:
+    variants: +core+cuda+dnn+eigen~gtk+highgui+imgproc+ipp+jasper+java+jpeg+openmp+png+python~qt+shared+tiff~vtk+zlib
+  fftw:
+    variants: +openmp
+  suite-sparse:
+    variants: +cuda
+  gnuplot:
+    variants: +X+cairo+gd+libcerf ~pbm~wx
