@@ -37,6 +37,10 @@ packages:
       jpeg: [libjpeg-turbo, libjpeg]
   python:
     variants: +shared~tk~ucs4
+  openmpi:
+    variants: +cuda fabrics=libfabric ~java schedulers=slurm ~sqlite3~thread_multiple+vt
+  libfabric:
+    variants: fabrics=psm,psm2,sockets,udp,verbs +spackfabrics
   boost:
     variants: +atomic+chrono~clanglibcpp+date_time~debug+filesystem~graph~icu+iostreams+locale+log+math+mpi+multithreaded +program_options+python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout+wave arch=linux-rhel7-x86_64 
   blast-plus:
