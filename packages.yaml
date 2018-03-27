@@ -15,7 +15,7 @@
 # -------------------------------------------------------------------------
 packages:
   all::
-    compiler: [gcc@7.1.0]
+    compiler: [gcc@4.8.5]
     providers:
       awk: [gawk]
       blas: [openblas]
@@ -55,7 +55,25 @@ packages:
     variants: +core+cuda+dnn+eigen~gtk+highgui+imgproc+ipp+jasper+java+jpeg+openmp+png+python~qt+shared+tiff~vtk+zlib
   fftw:
     variants: +openmp
-  suite-sparse:
-    variants: +cuda
   gnuplot:
     variants: +X+cairo+gd+libcerf ~pbm~wx
+  eigen:
+    version: [3.3.3]
+    variants: +fftw+metis+mpfr+scotch+suitesparse
+  suite-sparse:
+    version: [5.1.0]
+    variants: +cuda~openmp+pic~tbb
+  libjpeg-turbo:
+    version: [1.5.0]
+  nasm:
+    version: [2.11.06]
+  libpng:
+    version: [1.6.29]
+  protobuf:
+    version: [3.1.0]
+  py-setuptools:
+    version: [35.0.2]
+  py-packaging:
+    version: [16.8]
+  py-six:
+    version: [1.10.0]
