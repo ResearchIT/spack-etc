@@ -7,7 +7,6 @@ compilers:
     operating_system: rhel7
     paths:
       cc: /usr/bin/gcc
-      cflags: -march=sse4_2 -march=avx -march=avx2
       cxx: /usr/bin/g++
       f77: /usr/bin/gfortran
       fc: /usr/bin/gfortran
