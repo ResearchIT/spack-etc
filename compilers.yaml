@@ -25,3 +25,17 @@ compilers:
       fc: /opt/rit/spack-app/linux-rhel7-x86_64/gcc-4.8.5/gcc-7.3.0-xegsmw4io2dcncdni4rqhfmhuzljcg3l/bin/gfortran
     spec: gcc@7.3.0
     target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /opt/rit/spack-app/linux-rhel7-x86_64/gcc-4.8.5/gcc-6.4.0-vddll7o3wc4fm5ziq2azb6v6xbcrbeid/bin/gcc
+      cxx: /opt/rit/spack-app/linux-rhel7-x86_64/gcc-4.8.5/gcc-6.4.0-vddll7o3wc4fm5ziq2azb6v6xbcrbeid/bin/g++
+      f77: /opt/rit/spack-app/linux-rhel7-x86_64/gcc-4.8.5/gcc-6.4.0-vddll7o3wc4fm5ziq2azb6v6xbcrbeid/bin/gfortran
+      fc: /opt/rit/spack-app/linux-rhel7-x86_64/gcc-4.8.5/gcc-6.4.0-vddll7o3wc4fm5ziq2azb6v6xbcrbeid/bin/gfortran
+    spec: gcc@6.4.0
+    target: x86_64
+
